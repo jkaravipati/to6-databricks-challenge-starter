@@ -1,0 +1,37 @@
+{
+  "run1": {
+    "notebook_url": "https://dbc-48a16403-f66f.cloud.databricks.com/editor/notebooks/2616693406010676?o=7474648218609329",
+    "executed_at_utc": "2026-11-23T23:00:32+00:00"
+  },
+  "run2": {
+    "notebook_url": "https://dbc-48a16403-f66f.cloud.databricks.com/editor/notebooks/2616693406010676?o=7474648218609329",
+    "executed_at_utc": "2026-11-23T23:03:27+00:00"
+  },
+  "tables": {
+    "return_features": {
+      "run1_rows": 12,
+      "run2_rows": 12,
+      "identical_ids_and_values": true,
+      "no_duplicate_ids_in_run2": true
+    },
+    "features_train": {
+      "run1_rows": 4,
+      "run2_rows": 4,
+      "identical_ids_and_values": true,
+      "no_duplicate_ids_in_run2": true
+    },
+    "features_validation": {
+      "run1_rows": 4,
+      "run2_rows": 4,
+      "identical_ids_and_values": true,
+      "no_duplicate_ids_in_run2": true
+    },
+    "features_test": {
+      "run1_rows": 4,
+      "run2_rows": 4,
+      "identical_ids_and_values": true,
+      "no_duplicate_ids_in_run2": true
+    }
+  },
+  "all_identical": true
+}

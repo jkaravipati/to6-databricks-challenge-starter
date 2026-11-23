@@ -1,0 +1,117 @@
+{
+  "rejection_reference": "training.to6_c3_aacde3d25b55.initial_rejection",
+  "source_table": "training.to6_challenge3_inputs.returns_initial",
+  "status": "REJECTED",
+  "rule_results": [
+    {
+      "table": "training.to6_challenge3_inputs.returns_initial",
+      "rule_type": "uniqueness",
+      "rule": "return_id is unique",
+      "violating_rows": 2,
+      "status": "FAIL"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_initial",
+      "rule_type": "completeness",
+      "rule": "income is not NULL",
+      "violating_rows": 1,
+      "status": "FAIL"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_initial",
+      "rule_type": "validity",
+      "rule": "income is not negative",
+      "violating_rows": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_initial",
+      "rule_type": "completeness",
+      "rule": "return_id, tax_year, deduction not NULL",
+      "violating_rows": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_initial",
+      "rule_type": "validity",
+      "rule": "deduction is not negative",
+      "violating_rows": 0,
+      "status": "PASS"
+    }
+  ],
+  "gate_result": "training.to6_challenge3_inputs.returns_initial REJECTED: feature output blocked",
+  "affected_records": [
+    {
+      "return_id": "R01",
+      "taxpayer_id": "F0",
+      "tax_year": 2022,
+      "income": 100,
+      "deduction": 20,
+      "failed_rule": "uniqueness",
+      "rejection_reason": "duplicate return_id (2 copies)",
+      "source_table": "training.to6_challenge3_inputs.returns_initial",
+      "validated_at": "2026-11-23 23:02:53.419471"
+    },
+    {
+      "return_id": "R01",
+      "taxpayer_id": "F0",
+      "tax_year": 2022,
+      "income": 100,
+      "deduction": 20,
+      "failed_rule": "uniqueness",
+      "rejection_reason": "duplicate return_id (2 copies)",
+      "source_table": "training.to6_challenge3_inputs.returns_initial",
+      "validated_at": "2026-11-23 23:02:53.419471"
+    },
+    {
+      "return_id": "R02",
+      "taxpayer_id": "F1",
+      "tax_year": 2022,
+      "income": null,
+      "deduction": 33,
+      "failed_rule": "completeness",
+      "rejection_reason": "missing required income",
+      "source_table": "training.to6_challenge3_inputs.returns_initial",
+      "validated_at": "2026-11-23 23:02:53.419471"
+    }
+  ],
+  "corrected_status": "ACCEPTED",
+  "corrected_rule_results": [
+    {
+      "table": "training.to6_challenge3_inputs.returns_corrected",
+      "rule_type": "uniqueness",
+      "rule": "return_id is unique",
+      "violating_rows": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_corrected",
+      "rule_type": "completeness",
+      "rule": "income is not NULL",
+      "violating_rows": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_corrected",
+      "rule_type": "validity",
+      "rule": "income is not negative",
+      "violating_rows": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_corrected",
+      "rule_type": "completeness",
+      "rule": "return_id, tax_year, deduction not NULL",
+      "violating_rows": 0,
+      "status": "PASS"
+    },
+    {
+      "table": "training.to6_challenge3_inputs.returns_corrected",
+      "rule_type": "validity",
+      "rule": "deduction is not negative",
+      "violating_rows": 0,
+      "status": "PASS"
+    }
+  ],
+  "next_action": "Reject the whole initial batch; use returns_corrected, which passes the same rules."
+}

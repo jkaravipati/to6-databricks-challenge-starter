@@ -1,0 +1,30 @@
+{
+  "table": "training.to6_c3_aacde3d25b55.features_test",
+  "columns": [
+    "return_id",
+    "tax_year",
+    "deduction_to_income"
+  ],
+  "rows": [
+    [
+      "R09",
+      2024,
+      null
+    ],
+    [
+      "R10",
+      2024,
+      0.137
+    ],
+    [
+      "R11",
+      2024,
+      0.13636363636363635
+    ],
+    [
+      "R12",
+      2024,
+      0.13583333333333333
+    ]
+  ]
+}
